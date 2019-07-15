@@ -40,5 +40,5 @@ window.location.href = "./login.html"
    }
     }
 };
-xhttp.open("GET", `https://api1.jola.gq/listing?name=${params}&sessid=${localStorage.getItem('sessid')}`, true);
+xhttp.open("GET", `https://api1.getjola.me/listing?name=${params}&sessid=${localStorage.getItem('sessid')}`, true);
 xhttp.send();
