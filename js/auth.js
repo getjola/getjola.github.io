@@ -18,7 +18,7 @@ function login() {
 			}
 		}
 	};
-	xhttp.open("GET", `https://api1.jola.gq/sessid?email=${email}&password=${password}`, true);
+	xhttp.open("GET", `https://api1.getjola.me/sessid?email=${email}&password=${password}`, true);
 	xhttp.send();
 }
 
@@ -39,6 +39,6 @@ function register() {
 			}
 		}
 	};
-	xhttp.open("GET", `https://api1.jola.gq/createacc?email=${email}&password=${password}`, true);
+	xhttp.open("GET", `https://api1.getjola.me/createacc?email=${email}&password=${password}`, true);
 	xhttp.send();
 }
