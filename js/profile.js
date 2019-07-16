@@ -20,5 +20,5 @@ xhttp.onreadystatechange = function() {
 
     }
 };
-xhttp.open("GET", `https://api1.getjola.me/checksession?email=${email}&sessid=${sessid}`, true);
+xhttp.open("GET", `https://api1.getjola.me/checksession?sessid=${sessid}&email=${email}`, true);
 xhttp.send();
