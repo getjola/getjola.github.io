@@ -9,21 +9,21 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./styles/register.css">
     <title>Jola - Register</title>
   </head>
   <body>
-       
+
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
         <div class="container">
           <a class="navbar-brand js-scroll-trigger" href="/"><img width="40"  class="animated rollIn" src="./assets/costume3.png"></img></a>
- 
+
 
           <div class="collapse navbar-collapse" id="navbarResponsive">
-     
-      
+
+
             </ul>
           </div>
         </div>
@@ -31,27 +31,53 @@
       </nav>
 
 
-<div class="container">
+<div class="container" style="">
   <br> <br>
+
+    <center><div id="loader" style="display:none;" class="loader"></div></center>
+
+<div id="registerPanel">
   <h4 class="mx-auto text-center"> Sign up for Jola</h4>
 <br id="badpass" style="display:none;">
 <div id="badpass2" style="display:none;" class="alert alert-danger" role="alert">
-  Invalid username or password.
+  Your account couldn't be created. Please ensure that you've filled in everything correctly.
 </div>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
-  </div>
+<div class="form-horizontal">
+<center>
+  <label for="exampleInputEmail1">Email address</label>
+  <input type="email" class="control-label col-sm-5 form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+<br>
+
+
+    <label>Password <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Make sure it something that nobody can guess!&#10;&#10;Bad Password: dogsarecool &#10;Good Password: d0gg0@cool"></i></label>
+    <input type="password" class="control-label col-sm-5 form-control" id="password" placeholder="Password">
+    <div id="message">
+
+    </div>
+<br>
+
+    <label>Grade</label> <br>
+    <select id="grade" class="control-label col-sm-5 custom-select">
+      <option value="9">9th</option>
+      <option value="10">10th</option>
+      <option value="11">11th</option>
+      <option value="12">12th</option>
+    </select>
+  <br>
+  <br>
+  <label>Zip Code</label>
+    <input  id="zip" class="control-label col-sm-5 form-control" placeholder="Zip Code">
+
+  </center>
   <center>
-  <button type="submit" class="btn btn-dark" onclick="register()">Create</button>
-    <small id="emailHelp" class="form-text text-muted">By clicking create you agree that you have read the <a href="./privacypolicy.html">Privacy Policy</a>.</small>
+<br>
+  <button type="submit" class="col-sm-5 btn btn-block btn-lg btn-outline-dark" onclick="register()">Create</button>
+  <br>
+    <small class="form-text text-muted">By clicking create you agree that you have read the <a href="./privacypolicy.html">Privacy Policy</a>.</small>
 
 </center>
+</div>
 
 </div>
 
@@ -59,7 +85,8 @@
 
 
 
-
+<br>
+<br>
 
 
 

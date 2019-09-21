@@ -8,7 +8,7 @@ function login() {
 			if (this.responseText === "Invalid credentials") {
 				document.getElementById("badpass").style.display = "block";
 							document.getElementById("badpass2").style.display = "block";
-				
+
 
 			} else {
 				console.log(this.responseText)
@@ -23,24 +23,55 @@ function login() {
 }
 
 function register() {
+
+	function validateEmail(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(String(email).toLowerCase());
+	}
+
+	if (validateEmail(document.getElementById("email").value)) {
+
+if (document.getElementById("password").value.length < 1 || !document.getElementById("grade").value || !document.getElementById("zip").value) {
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("registerPanel").style.display = "block";
+	document.getElementById("badpass").style.display = "block";
+	document.getElementById("badpass2").style.display = "block";
+} else {
+
+	document.getElementById("loader").style.display = "block";
+		document.getElementById("registerPanel").style.display = "none";
 	localStorage.clear()
 		var email = document.getElementById("email").value;
 	var password = document.getElementById("password").value;
+	var grade = document.getElementById("grade").value;
+		var zip = document.getElementById("zip").value;
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			if (this.responseText === "Invalid credentials") {
-				document.getElementById("badpass").style.display = "block";
-							document.getElementById("badpass2").style.display = "block";
-				
+			if (this.responseText === "Done") {
+window.location.href = "./login.html"
+
+
 
 			} else {
-				window.location.href = "./login.html"
+console.log(this.responseText)
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("registerPanel").style.display = "block";
+				document.getElementById("badpass").style.display = "block";
+				document.getElementById("badpass2").style.display = "block";
 			}
 		}
+		}
 	};
-	xhttp.open("GET", `https://api1.getjola.me/createacc?email=${email}&password=${password}`, true);
+
+	xhttp.open("GET", `https://api1.getjola.me/createacc?email=${email}&password=${password}&grade=${grade}&zip=${zip}`, true);
 	xhttp.send();
+} else {
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("registerPanel").style.display = "block";
+	document.getElementById("badpass").style.display = "block";
+	document.getElementById("badpass2").style.display = "block";
+}
 }
 
 function logout(sessid) {
