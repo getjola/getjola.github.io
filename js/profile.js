@@ -45,5 +45,25 @@ xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`
 xhttp.send();
 }
 
+function checkIfBan() {
+  var xhttp = new XMLHttpRequest();
 
-syncAll();
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        if(JSON.parse(this.responseText).terminated === "yes") {
+document.getElementById("beta").style.display = "none";
+          document.getElementById("banned").style.display = "block";
+          document.getElementById("banreason").innerHTML = JSON.parse(this.responseText).terminationreason;
+document.getElementById("loader").style.display = "none";
+
+        } else {
+          syncAll();
+        }
+
+      }
+}
+xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
+xhttp.send();
+}
+
+checkIfBan();
