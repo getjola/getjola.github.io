@@ -42,8 +42,8 @@ if (document.getElementById("password").value.length < 1 || !document.getElement
 		document.getElementById("registerPanel").style.display = "none";
 	localStorage.clear()
 		var email = document.getElementById("email").value;
-	var password = document.getElementById("password").value;
-	var grade = document.getElementById("grade").value;
+		var password = document.getElementById("password").value;
+		var grade = document.getElementById("grade").value;
 		var zip = document.getElementById("zip").value;
 		var firstname = document.getElementById("firstname").value;
 		var lastname = document.getElementById("lastname").value;
