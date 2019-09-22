@@ -24,28 +24,21 @@ xhttp.open("GET", `https://api1.getjola.me/checksession?sessid=${sessid}&email=$
 xhttp.send();
 
 
-function getGrade() {
-  var xhttp = new XMLHttpRequest();
-
-  xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("grade").innerHTML =  JSON.parse(this.responseText).grade + "th";
-      }
-}
-xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
-xhttp.send();
-}
 
 
-function getZip() {
+function syncAll() {
   var xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("zip").innerHTML =  JSON.parse(this.responseText).zip;
-        //lazy here
-        document.getElementById("name").innerHTML = JSON.parse(this.responseText).firstname + " " + JSON.parse(this.responseText).lastname;
-            document.getElementById("email").innerHTML =  localStorage.getItem("email")
+        document.getElementById("grade").innerHTML =  JSON.parse(this.responseText).grade + "th";
+        document.getElementById("name").innerHTML = " " + JSON.parse(this.responseText).firstname + " " + JSON.parse(this.responseText).lastname;
+        document.getElementById("pfp").src = `https://ui-avatars.com/api/?name=${JSON.parse(this.responseText).firstname}+${JSON.parse(this.responseText).lastname}&color=fffff&background=ffa500`
+        document.getElementById("email").innerHTML =  localStorage.getItem("email")
+        document.getElementById("pagecontent").style.display = "block";
+        document.getElementById("loader").style.display = "none";
+
       }
 }
 xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
@@ -53,5 +46,4 @@ xhttp.send();
 }
 
 
-getGrade();
-getZip();
+syncAll();
