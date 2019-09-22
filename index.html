@@ -74,14 +74,17 @@ section {
     </div>
   </nav>
 
-  <header style="background-image: url('https://i.pinimg.com/originals/42/c5/25/42c5253894f5a4c8473b8fa84973badf.jpg'); background-repeat: no-repeat;
-  background-size: cover;" class="text-white test  " id="test">
-    <div  class="container text-center animated fadeInUp">
+  <header style="background-color:#2a3036;">
+    <div class="container text-center animated fadeInUp">
 
 
       <img width="100" class="lead animated fadeInUp" src="./assets/costume3.png"></img>
 
-      <p style="font-size:200%" class="lead animated fadeInUp">An advanced student job finding website.</p>
+      <p style="font-size:200%;color:white;" class="lead animated fadeInUp"><strong>Your first job is just a few clicks away.</strong></p>
+      <button type="submit" class="col-sm-2 btn  btn-lg btn-outline-light" onclick="window.location.href = './register.html'">Register</button>
+      <button type="submit" class="col-sm-2 btn btn-lg  btn-outline-light" onclick="window.location.href = './login.html'">Login</button>
+
+
     </div>
   </header>
 
@@ -94,14 +97,7 @@ section {
       <div class="row">
         <div class="col-lg-8 mx-auto">
 
-          <h2>What is Jola?</h2>
-          <p class="lead">TLDR; Jola is a job/internship finding website for students.</p>
-          <ul>
-            <li>Jola helps students find a job/internship based on their interests.</li>
-            <li>We use student grades to determine jobs that are appropriate for them.</li>
-            <li>It also uses AI to improve student job choices.</li>
-            <li>A really clean job-finding interface..</li>
-          </ul>
+          <p style="font-size:2rem;text-align:center;">Jola is an <b>awesome</b> job/internship finding website for students.</p>
         </div>
       </div>
     </div>
@@ -109,35 +105,56 @@ section {
 
   <section id="services" class="bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Features</h2>
-          <p class="lead">Since our primary audience are students, we've designed our UI to be incredibly easy to use. Students can find a job based of their interests and apply for it. They'll be able to track the application right through the website. Jola uses AI to determine what jobs to show to students. We've also made it really easy to connect to an external SIS systems.</p>
+
+                <div class="row">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <center> <i style="font-size:5rem;" class="fas fa-users"></i> </center>
+                  <br><center> <h5 class="card-title">Easily get teacher suggestions.</h5> </center>
+                  <p style="text-align:center;"> You may sometimes not be sure if you should pursue a certain career. You can get suggestions from teachers based of your performance in class!</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <center> <i style="font-size:5rem;color:orange;" class="fas fa-star"></i> </center>
+                  <br><center> <h5 class="card-title">Choose from jobs that you actually like.</h5> </center>
+                  <p style="text-align:center;"> Pick jobs related from a field that you actually enjoy. It's silly that people assume that the jobs you get in highschool typically suck.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <center> <i style="font-size:5rem;" class="fas fa-address-card"></i> </center><br>
+                  <center> <h5 class="card-title">Show off who you really are!</h5> </center>
+                  <p style="text-align:center;"> Profile's allow you to share feats you've accomplished in the past, previous work experience, contact information and so much more!</p>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+    </div>
+  </section>
+
+
+    <section id="about">
+      <div onscroll="about()" class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <center>
+  <h2 style="font-size:3rem;">What are you waiting for?</h2> <br>
+  <button type="submit" class="col-sm-6 btn  btn-block btn-lg btn-outline-dark" onclick="window.location.href = './register.html'">Register</button>
+</center>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-  <section id="other" class="other">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>You're in good hands..</h2>
-          <p class="lead">Student Privacy is #1 priority. Jola uses powerful services to keep student credentials safe. Jola was created by a trustworthy person and is moderated by an intelligent group of people.</p>
-
-          <div align="center"class="useandfollows">
-          <img  width="20%" src="https://gradecam.com/wp-content/uploads/2016/10/Student-Privacy-Pledge-Sig_logo.png">
-        <img  style="margin-left:3%;"width="20%" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Cloudflare_logo.svg/1200px-Cloudflare_logo.svg.png">
-        <img   style="margin-left:3%;"width="13%" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-day.svg">
-      </div>
-
-
-      </div>
-      </div>
-    </div>
-  </section>
 
 
 
