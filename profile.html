@@ -9,8 +9,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/register.css">
-    <title>Jola - Register</title>
+    <link rel="stylesheet" href="./styles/profile.css">
+    <title>Jola - Profile</title>
   </head>
   <body>
 
@@ -62,21 +62,49 @@
   <div class="container">
 
     <div class="alert alert-danger" role="alert">
-  <h4 class="alert-heading">JOLA IS STILL IN HEAVY DEVELOPMENT</h4>
-  <p> Majority of the features planned have yet to be completed.</p>
-  <hr>
-  <p class="mb-0">ALL DYNAMIC DATA IS CURRENTLY READ ONLY</p>
+      Jola is currently under heavy development. Use at your own risk.
 </div>
 
 
-  <h4 style="font-size:3rem;"> Your Profile </h4>
-  <p><span style="font-size:1.5rem;">Bio:</span><br><span id="bio" style="color:red;"> this is not ready yet<br><a href="./edit-bio">Edit Bio</a></p>
+  <h4 style="font-size:3rem;" id="name"></h4>
+  <div class="row">
+  <div class="col-9">
+      <div style="">
+        <br>
+        <h4 style="">Bio:</h4>
+    <p><span id="bio">This user has not configured their biography yet.</p>
 
-      <h3 style="font-size:2rem;"> beta </h4>
-        <p>dynamically served data dump:</p>
-        <strong>grade:</strong> <p id="grade">nothing found!</p>
-        <strong>zipcode:</strong> <p id="zip">nothing found!</p>
-        <strong>email:</strong> <p id="email">nothing found!</p>
+    </div>
+
+    <div style="">
+      <br>
+    <h4>Connections:</h4>
+    <p>This user has no connections.</p>
+    <br>
+    <h4>Education:</h4>
+    <p>This user has not stated where they are being educated.</p>
+    <br>
+  </div>
+  <br>
+<br>
+
+
+  </div>
+  <div style="margin-bottom:4.19%;" class="col">
+    <br>
+    <h4>Other Information</h4>
+    <strong>Grade:</strong> <p id="grade"></p>
+    <strong>Zipcode:</strong> <p id="zip">nothing found!</p>
+    <strong>Email:</strong> <p id="email">nothing found!</p>
+
+    <br>
+
+    <button style="float:right;" class="btn btn-dark"><i class="fas fa-pencil-alt"></i> Edit Page</button>
+  </div>
+</div>
+
+
+
 </div>
 
 

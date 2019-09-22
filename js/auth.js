@@ -31,7 +31,7 @@ function register() {
 
 	if (validateEmail(document.getElementById("email").value)) {
 
-if (document.getElementById("password").value.length < 1 || !document.getElementById("grade").value || !document.getElementById("zip").value) {
+if (document.getElementById("password").value.length < 1 || !document.getElementById("grade").value || !document.getElementById("zip").value || !document.getElementById("firstname").value || !document.getElementById("lastname").value) {
 	document.getElementById("loader").style.display = "none";
 	document.getElementById("registerPanel").style.display = "block";
 	document.getElementById("badpass").style.display = "block";
@@ -45,6 +45,8 @@ if (document.getElementById("password").value.length < 1 || !document.getElement
 	var password = document.getElementById("password").value;
 	var grade = document.getElementById("grade").value;
 		var zip = document.getElementById("zip").value;
+		var firstname = document.getElementById("firstname").value;
+		var lastname = document.getElementById("lastname").value;
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -64,7 +66,7 @@ console.log(this.responseText)
 		}
 	};
 
-	xhttp.open("GET", `https://api1.getjola.me/createacc?email=${email}&password=${password}&grade=${grade}&zip=${zip}`, true);
+	xhttp.open("GET", `https://api1.getjola.me/createacc?email=${email}&password=${password}&grade=${grade}&zip=${zip}&firstname=${firstname}&lastname=${lastname}`, true);
 	xhttp.send();
 } else {
 	document.getElementById("loader").style.display = "none";
