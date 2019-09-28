@@ -18,7 +18,7 @@ function login() {
 			}
 		}
 	};
-	xhttp.open("GET", `https://api1.getjola.me/sessid?email=${email}&password=${password}`, true);
+	xhttp.open("GET", `https://www.jola.gq/sessid?email=${email}&password=${password}`, true);
 	xhttp.send();
 }
 
@@ -66,7 +66,7 @@ console.log(this.responseText)
 		}
 	};
 
-	xhttp.open("GET", `https://api1.getjola.me/createacc?email=${email}&password=${password}&grade=${grade}&zip=${zip}&firstname=${firstname}&lastname=${lastname}`, true);
+	xhttp.open("GET", `https://www.jola.gq/createacc?email=${email}&password=${password}&grade=${grade}&zip=${zip}&firstname=${firstname}&lastname=${lastname}`, true);
 	xhttp.send();
 } else {
 	document.getElementById("loader").style.display = "none";
@@ -88,7 +88,7 @@ function logout(sessid) {
 	    		}
 	    }
 	};
-	xhttp.open("GET", `https://api1.getjola.me/deletesessid?sessid=${sessid}`, true);
+	xhttp.open("GET", `https://www.jola.gq/deletesessid?sessid=${sessid}`, true);
 	xhttp.send();
 
 }

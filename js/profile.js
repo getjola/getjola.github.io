@@ -20,7 +20,7 @@ xhttp.onreadystatechange = function() {
 
     }
 };
-xhttp.open("GET", `https://api1.getjola.me/checksession?sessid=${sessid}&email=${email}`, true);
+xhttp.open("GET", `https://www.jola.gq/checksession?sessid=${sessid}&email=${email}`, true);
 xhttp.send();
 
 
@@ -41,7 +41,7 @@ function syncAll() {
 
       }
 }
-xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
+xhttp.open("GET", `https://www.jola.gq/user?sessid=${sessid}&email=${email}`, true);
 xhttp.send();
 }
 
@@ -62,7 +62,7 @@ document.getElementById("loader").style.display = "none";
 
       }
 }
-xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
+xhttp.open("GET", `https://www.jola.gq/user?sessid=${sessid}&email=${email}`, true);
 xhttp.send();
 }
 

@@ -11,10 +11,10 @@ xhttp.onreadystatechange = function() {
        if (response === "good") {
                    window.location.href = './profile.html';
        } else {
-                
+
        }
 
     }
 };
-xhttp.open("GET", `https://api1.getjola.me/checksession?sessid=${sessid}&email=${email}`, true);
+xhttp.open("GET", `https://www.jola.gq/checksession?sessid=${sessid}&email=${email}`, true);
 xhttp.send();

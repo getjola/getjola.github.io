@@ -15,7 +15,7 @@ function syncGeneralSettings() {
       }
     }
 
-        xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
+        xhttp.open("GET", `https://www.jola.gq/user?sessid=${sessid}&email=${email}`, true);
         xhttp.send();
 }
 
@@ -43,7 +43,7 @@ function checkUserEmployer() {
       }
     }
 
-    xhttp.open("GET", `https://api1.getjola.me/user?sessid=${sessid}&email=${email}`, true);
+    xhttp.open("GET", `https://www.jola.gq/user?sessid=${sessid}&email=${email}`, true);
     xhttp.send();
 
   // if user isn't...

@@ -1,5 +1,5 @@
 console.log("[client] getlisting.js has loaded.");
-console.log( `https://api1.getjola.me/listing?name=${params}&sessid=${localStorage.getItem('sessid')}`)
+console.log( `https://www.jola.gq/listing?name=${params}&sessid=${localStorage.getItem('sessid')}`)
 function getSearchParameters() {
       var prmstr = window.location.search.substr(1);
       return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
@@ -47,6 +47,6 @@ xhttp.onreadystatechange = function() {
    }
     }
 };
-console.log(`https://api1.getjola.me/listing?name=${params}&email=${localStorage.getItem('email')}&sessid=${localStorage.getItem('sessid')}`)
-xhttp.open("GET", `https://api1.getjola.me/listing?name=${params}&email=${localStorage.getItem('email')}&sessid=${localStorage.getItem('sessid')}`, true);
+console.log(`https://www.jola.gq/listing?name=${params}&email=${localStorage.getItem('email')}&sessid=${localStorage.getItem('sessid')}`)
+xhttp.open("GET", `https://www.jola.gq/listing?name=${params}&email=${localStorage.getItem('email')}&sessid=${localStorage.getItem('sessid')}`, true);
 xhttp.send();
