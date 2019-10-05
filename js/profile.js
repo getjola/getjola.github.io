@@ -31,6 +31,7 @@ function syncAll() {
 
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("bio").innerHTML = JSON.parse(this.responseText).bio;
         document.getElementById("zip").innerHTML =  JSON.parse(this.responseText).zip;
         document.getElementById("grade").innerHTML =  JSON.parse(this.responseText).grade + "th";
         document.getElementById("name").innerHTML = " " + JSON.parse(this.responseText).firstname + " " + JSON.parse(this.responseText).lastname;
@@ -67,3 +68,42 @@ xhttp.send();
 }
 
 checkIfBan();
+
+
+function editProfile() {
+    document.getElementById("biotitle").innerHTML = 'Bio: <small>(editable)</small>';
+document.getElementById("save").style.display = "block";
+
+    document.getElementById("edit").style.display  = "none";
+  document.getElementById("bio").contentEditable = "true";
+
+}
+
+function save() {
+  document.getElementById("pagecontent").style.display = "none";
+    document.getElementById("loader").style.display = "block";
+  document.getElementById("biotitle").innerHTML = 'Bio:';
+
+
+  document.getElementById("save").style.display  = "none";
+    document.getElementById("edit").style.display  = "block";
+    document.getElementById("bio").contentEditable = "false";
+
+  var newBio = document.getElementById("bio").innerHTML;
+    var newZip = document.getElementById("zip").innerHTML;
+    console.log(newBio, newZip);
+    document.getElementById("pagecontent").style.display = "block";
+      document.getElementById("loader").style.display = "none";
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+            window.location.reload();
+          }
+      };
+      xhttp.open("GET", `https://jola.gq/updateuser?sessid=${sessid}&email=${email}&bio=${newBio}`, true);
+      xhttp.send();
+
+      //
+}

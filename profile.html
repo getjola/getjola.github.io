@@ -83,7 +83,7 @@
   <div class="col-9">
       <div style="">
         <br>
-        <h4 style="">Bio:</h4>
+        <h4 id="biotitle" style="">Bio:</h4>
     <p><span id="bio">This user has not configured their biography yet.</p>
 
     </div>
@@ -106,12 +106,15 @@
     <br>
     <h4>Other Information</h4>
     <strong>Grade:</strong> <p id="grade">-</p>
-    <strong>Zipcode:</strong> <p id="zip">-</p>
+    <strong id="ziptitle">Zipcode:</strong> <p id="zip">-</p>
     <strong>Email:</strong> <p id="email">-</p>
 
     <br>
 
-    <button style="float:right;" class="btn btn-dark"><i class="fas fa-pencil-alt"></i> Edit Page</button>
+    <button id="edit" onclick="editProfile();" style="float:right;" class="btn btn-dark"><i class="fas fa-pencil-alt"></i> Edit Page</button>
+    <button id="save" onclick="save();" style="float:right;display:none;" class="btn btn-success"><i class="fas fa-save"></i> Save Changes</button>
+
+
   </div>
 </div>
 </div>
@@ -126,7 +129,9 @@
 
 <br>
 <br>
-
+<script>
+console.log('%c Stop!', 'color:blue;border:1px solid black');
+</script>
     <script src="./js/auth.js?latest4"></script>
     <script src="./js/profile.js?latest3"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
