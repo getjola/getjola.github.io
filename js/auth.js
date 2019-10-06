@@ -14,7 +14,7 @@ function login() {
 				console.log(this.responseText)
 				localStorage.setItem('email', email);
 				localStorage.setItem('sessid', this.responseText);
-				window.location.href = "./profile.html"
+				window.location.href = "https://getjola.me/profile.html"
 			}
 		}
 	};
@@ -51,7 +51,7 @@ if (document.getElementById("password").value.length < 1 || !document.getElement
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.responseText === "Done") {
-window.location.href = "./login.html"
+window.location.href = "https://getjola.me/login.html"
 
 
 
@@ -84,7 +84,7 @@ function logout(sessid) {
 	xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
 	    		if (xhttp.responseText === "deleted") {
-	    			window.location.href = "./login.html?x=logout"
+	    			window.location.href = "https://getjola.me/login.html?x=logout"
 	    		}
 	    }
 	};
