@@ -11,7 +11,7 @@ function reset() {
        if (this.responseText === "Done") {
          window.location.href = "./login";
        } else {
-
+          window.alert("Something went wrong! ")
        }
      }
    };
