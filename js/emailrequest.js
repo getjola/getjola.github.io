@@ -3,7 +3,7 @@ function sendEmail() {
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    if(this.responseText == "okay") {
+    if(this.responseText == "good") {
       document.getElementById("box1").style.display = "none";
       document.getElementById("box2").style.display = "block";
     } else {
