@@ -1,7 +1,7 @@
 const urlObj = new URLSearchParams(window.location.search);
 
 function reset() {
-  const email = urlObj.get('user');
+  const email = urlObj.get('email');
   const sessid = urlObj.get('code');
   var password = document.getElementById("password").value;
   var xhttp = new XMLHttpRequest();
@@ -15,6 +15,7 @@ function reset() {
        }
      }
    };
+   console.log(`https://jola.gq/changepassword?password=${password}&email=${email}&sessid=${sessid}`)
    xhttp.open("GET", `https://jola.gq/changepassword?password=${password}&email=${email}&sessid=${sessid}`, true);
    xhttp.send();
 }
