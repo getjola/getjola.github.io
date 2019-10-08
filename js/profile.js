@@ -1,3 +1,5 @@
+
+
 function searchUser() {
   var userFind = document.getElementById("userin").value;
   window.location.href = `https://getjola.me/user.html?user=${userFind}`
