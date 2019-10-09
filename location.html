@@ -3,15 +3,14 @@
   <head>
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 
-<link rel="shortcut icon" type="image/png" href="./assets/costume3.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/profile.css">
-    <title>Jola - Profile</title>
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Jola - Register</title>
   </head>
   <body>
 
@@ -57,99 +56,30 @@
 
       </nav>
 
-
+<center>
   <br>
+  <div style="position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">
+  <h4 style="font-size:3rem;"> Is this where you live? </h4>
+  <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=19060&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://usave.co.uk">usave</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+<br>
+  <button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
+  <button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
 
-  <div class="container">
-
-
-
-    <div style="display:none;" id="banned">
-     <h1>This account has been banned from the Jola Platform.</h1>
-    <strong>Reason:</strong> <span id="banreason">no reason provided</span>
-    </div>
-
-    <div id="beta" class="alert alert-danger" role="alert">
-      Jola is currently under heavy development. Use at your own risk.
-</div>
-
-
-    <center><div id="loader" class="loader"></div></center>
-
-
-
-<div id="pagecontent" style="display:none;">
-
-  <h4 style="font-size:3rem;" ><img id="pfp" style="border-radius:55px;" src=""><span id="name"></span></h4>
-  <div class="row">
-  <div class="col-9">
-      <div style="">
-        <br>
-        <h4 id="biotitle" style="">Bio:</h4>
-    <p><span id="bio">This user has not configured their biography yet.</p>
-
-    </div>
-
-    <div style="">
-      <br>
-    <h4>Connections:</h4>
-    <p>This user has no connections.</p>
-    <br>
-    <h4>Education:</h4>
-    <p>This user has not stated where they are being educated.</p>
-    <br>
-  </div>
-  <br>
-
-
-
-
-  </div>
-
-
-
-
-  <div style="margin-bottom:4.19%;" class="col">
-    <br>
-    <h4>Other Information</h4>
-    <strong>Grade:</strong> <p id="grade">-</p>
-    <strong id="ziptitle">Zipcode:</strong> <p id="zip">-</p>
-    <strong>Email:</strong> <p id="email">-</p>
-
-    <br>
-
-
-    <button id="edit" onclick="editProfile();" style="float:right;" class="btn btn-dark"><i class="fas fa-pencil-alt"></i> Edit Page</button>
-    <button id="save" onclick="save();" style="float:right;display:none;" class="btn btn-success"><i class="fas fa-save"></i> Save Changes</button>
-<br style="float:right;">
-<br style="float:right;">
-
-<br style="float:right;">
-    <input  id="userin" class="form-control" placeholder="Enter user email">
-    <br style="float:right;">  <button style="float:right;" onclick="searchUser();" type="button" class="btn btn-outline-dark">Search</button>
-
-
-  </div>
-</div>
-</div>
-
+  <p> </p>
 
 
 </div>
-
-
+</center>
 
 <br>
 <br>
 <script>
-console.log('%c Stop!', 'color:blue;border:1px solid black');
+console.log('%cSTOP!\nNever paste anything here unless you wrote it yourself. You could potentially be giving someone the keys to your account without you even knowing!', 'font-style:bold; color:red;font-size:2rem;');
 </script>
-    <script src="./js/auth.js?latest4"></script>
-    <script src="./js/profile.js?latest3"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   </body>
-
 </html>
