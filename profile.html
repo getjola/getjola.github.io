@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
-<style>
-
-section {
-  padding: 150px 0;
-}</style>
+<script src="./js/pmobile.js"></script>
 <link rel="shortcut icon" type="image/png" href="./assets/costume3.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,6 +12,7 @@ section {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/profile.css">
     <title>Jola - Profile</title>
+
   </head>
   <body>
 
@@ -54,6 +51,9 @@ section {
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </li>
+              <li class="nav-item">
+
+              </li>
 
             </ul>
           </div>
@@ -61,10 +61,9 @@ section {
 
       </nav>
 
-
   <br>
 
-  <div class="container section">
+  <div>
 
 
 
@@ -73,18 +72,28 @@ section {
     <strong>Reason:</strong> <span id="banreason">no reason provided</span>
     </div>
 
-    <div id="beta" class="alert alert-danger" role="alert">
+    <div id="beta" style="margin-left:300px;margin-right:300px;" class="alert alert-danger" role="alert">
       Jola is currently under heavy development. Use at your own risk.
 </div>
+
+<img src="./assets/stibarcadvert.png" style="margin-left:100px;float: left;">
+
+<img src="./assets/jolaadvert.png" style="margin-right:100px;float: right;">
 
 
     <center><div id="loader" class="loader"></div></center>
 
 
+<div id="pagecontent" style="margin-left:300px;margin-right:300px;display:none;">
 
-<div id="pagecontent" style="display:none;">
+  <div style="float:right;" class="form-inline my-2 my-sm-0">
+  <input  id="userin" class="form-control" placeholder="Enter user email">
+  <button onclick="searchUser();" type="button" class="btn btn-outline-dark">Search</button>
+  </div>
 
   <h4 style="font-size:3rem;" ><img id="pfp" style="border-radius:55px;" src=""><span id="name"></span></h4>
+
+
   <div class="row">
   <div class="col-9">
       <div style="">
@@ -97,6 +106,8 @@ section {
     <div style="">
       <br>
     <h4>Connections:</h4>
+
+
     <p>This user has no connections.</p>
     <br>
     <h4>Education:</h4>
@@ -104,16 +115,11 @@ section {
     <br>
   </div>
   <br>
-
-
+<br>
 
 
   </div>
-
-
-
-
-  <div style="margin-bottom:4.19%;" class="col">
+  <div style="margin-bottom:4.19%;" class=" col">
     <br>
     <h4>Other Information</h4>
     <strong>Grade:</strong> <p id="grade">-</p>
@@ -122,34 +128,30 @@ section {
 
     <br>
 
-
     <button id="edit" onclick="editProfile();" style="float:right;" class="btn btn-dark"><i class="fas fa-pencil-alt"></i> Edit Page</button>
     <button id="save" onclick="save();" style="float:right;display:none;" class="btn btn-success"><i class="fas fa-save"></i> Save Changes</button>
-<br style="float:right;">
-<br style="float:right;">
-
-<br style="float:right;">
-    <input  id="userin" class="form-control" placeholder="Enter user email">
-    <br style="float:right;">  <button style="float:right;" onclick="searchUser();" type="button" class="btn btn-outline-dark">Search</button>
 
 
   </div>
+
+
+
 </div>
 </div>
 
 
 
 </div>
+
+
+<center><img style="margin-left:300px;margin-right:300px;" src="./assets/advert.png"></center>
 
 
 
 <br>
 <br>
-</div></div>
-
-
 <script>
-console.log('%c Stop!', 'color:blue;border:1px solid black');
+console.log('%cSTOP!\nNever paste anything here unless you wrote it yourself. You could potentially be giving someone the keys to your account without you even knowing!', 'font-style:bold; color:red;font-size:2rem;');
 </script>
     <script src="./js/auth.js?latest4"></script>
     <script src="./js/profile.js?latest3"></script>
@@ -157,8 +159,5 @@ console.log('%c Stop!', 'color:blue;border:1px solid black');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-
   </body>
-
 </html>
