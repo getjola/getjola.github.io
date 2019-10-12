@@ -89,19 +89,29 @@
 
 <div id="pagecontent" style="display:none;">
 
-
+<center>
   <h4 style="font-size:3rem;" ><img id="pfp" style="border-radius:55px;" src=""><span id="name"></span></h4>
+  <h4><span class="badge badge-dark"><i class="fas fa-university"></i> <span id="grade"></span></span>  <span class="badge badge-dark"><i class="fas fa-map-marker-alt"></i> <span id="zip"></span></span>
+    <span class="badge badge-dark"><i class="fas fa-envelope"></i> <span id="email"></span></span></h4>
 
+      <input  style="text-align:center;" id="userin" class="col-sm-3 form-control" placeholder="Enter user email">      
+       <span class="btn btn-dark btn-sm" style="margin-top:.4%;" onclick="searchUser();">Search</span>
 
-  <div class="row">
-  <div class="col-9">
+      </center>
+      
+
+<div style=" line-height: normal;">
       <div>
         <br>
-        <h4 id="biotitle">Bio:</h4>
+        <h4 id="biotitle">Bio: </h4> 
+  
     <p><span id="bio">This user has not configured their biography yet.</p>
       <textarea style="display:none;" class="form-control" id="nbio" rows="3"></textarea>
     </div>
 
+    <button id="edit" onclick="editProfile();"  class="btn btn-dark btn-sm"><i class="fas fa-pencil-alt"></i> Edit Page</button>
+    <button id="save" onclick="save();" style="display:none;" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save Changes</button>
+ 
     <div>
       <br>
     <h4>Connections:</h4>
@@ -111,7 +121,13 @@
     <br>
     <h4>Education:</h4>
     <p>This user has not stated where they are being educated.</p>
-    <br>
+ <br>
+
+
+
+  
+      </div>
+
       <hr>
     <h3>Jola Feed</h3>
     <div class="card-body d-flex flex-column align-items-start">
@@ -145,32 +161,7 @@
 
 
   </div>
-  <div style="margin-bottom:4.19%;" class=" col">
-    <br>
-    <h4>Other Information</h4>
-    <strong>Grade:</strong> <p id="grade">-</p>
-    <strong id="ziptitle">Zipcode:</strong> <p id="zip">-</p>
-    <strong>Email:</strong> <p id="email">-</p>
 
-    <br>
-
-    <button id="edit" onclick="editProfile();" style="float:right;" class="btn btn-dark"><i class="fas fa-pencil-alt"></i> Edit Page</button>
-    <button id="save" onclick="save();" style="float:right;display:none;" class="btn btn-success"><i class="fas fa-save"></i> Save Changes</button>
-    <br style="float:right;">
-    <br style="float:right;">
-    
-    <br style="float:right;">
-        <input  id="userin" class="form-control" placeholder="Enter user email">
-        <br style="float:right;">  <button style="float:right;" onclick="searchUser();" type="button" class="btn btn-outline-dark">Search</button>
-    
-    
-
-  </div>
-
-
-
-</div>
-</div>
 
 
 
