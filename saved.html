@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
-    
+<link rel="shortcut icon" type="image/png" href="./assets/costume3.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/register.css">
-    <title>Jola - Register</title>
+    <link rel="stylesheet" href="./styles/profile.css">
+    <title>Jola - Profile</title>
+
   </head>
   <body>
 
@@ -49,6 +50,7 @@
               <li class="nav-item">
                 <a style="cursor: pointer;" class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </li>
+            
 
             </ul>
           </div>
@@ -56,30 +58,60 @@
 
       </nav>
 
-<center>
   <br>
-  <div style="position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">
-  <h4 style="font-size:3rem;"> What are you interested in? </h4>
-  <p> </p>
+<style>
 
-<button class="btn btn-primary btn-lg">Computer Science</button>
-<button class="btn btn-warning btn-lg">Medical</button>
-<button class="btn btn-success btn-lg">Retail</button>
-<br><br>
-<button class="btn btn-danger btn-lg">Research</button>
-<button class="btn btn-info btn-lg">Education</button>
-<button class="btn btn-dark btn-lg">Police/Military</button>
-<button class="btn btn-secondary btn-lg">Volunteering</button>
-<br>
-<a href="./listings.html">I'm not interested in any of these..</a>
-</div>
+.main-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+}
+
+</style>
+  <div  class="container main-container" >
+
+
+
+    <div style="display:none;" id="banned">
+     <h1>This account has been banned from the Jola Platform.</h1>
+    <strong>Reason:</strong> <span id="banreason">no reason provided</span>
+    </div>
+
+    
+  <!--
+<img src="./assets/stibarcadvert.png" style="margin-left:100px;float: left;">
+<img src="./assets/jolaadvert.png" style="margin-right:100px;float: right;">
+
+    <center><div id="loader" class="loader"></div></center>
+
+
+-->
+
+<div id="pagecontent" style="display:block;">
+    <center>
+    <i style="color:rgb(224, 169, 48);font-size:5rem;" class="fas fa-sticky-note" ></i>
+    <h1> Stickies aren't avaliable yet.</h1>
+    <h5><i>This feature will be avaliable soon!</i></h5>
 </center>
+</div>
 
-<br>
-<br>
+</div>
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;"  href="./edu">Educators</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">Made with <i style="color:lightpink" class="fas fa-heart"></i> in the USA.</p> <br>
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;" href="./legal.html">Legal</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">&copy Jola 2019</p> <br>
+
+    </div>
+  </footer>
 <script>
 console.log('%cSTOP!\nNever paste anything here unless you wrote it yourself. You could potentially be giving someone the keys to your account without you even knowing!', 'font-style:bold; color:red;font-size:2rem;');
 </script>
+    <script src="./js/auth.js?latest4"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
