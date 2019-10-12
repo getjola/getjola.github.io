@@ -59,8 +59,18 @@
       </nav>
 
   <br>
+<style>
 
-  <div  class="container" >
+.main-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+}
+
+</style>
+  <div  class="container main-container" >
 
 
 
@@ -72,9 +82,7 @@
     
   <!--
 <img src="./assets/stibarcadvert.png" style="margin-left:100px;float: left;">
-
 <img src="./assets/jolaadvert.png" style="margin-right:100px;float: right;">
-
   -->
     <center><div id="loader" class="loader"></div></center>
 
@@ -143,9 +151,15 @@
 
 
 
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;"  href="./edu">Educators</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">Made with <i style="color:lightpink" class="fas fa-heart"></i> in the USA.</p> <br>
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;" href="./legal.html">Legal</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">&copy Jola 2019</p> <br>
 
-<br>
-<br>
+    </div>
+  </footer>
 <script>
 console.log('%cSTOP!\nNever paste anything here unless you wrote it yourself. You could potentially be giving someone the keys to your account without you even knowing!', 'font-style:bold; color:red;font-size:2rem;');
 </script>
