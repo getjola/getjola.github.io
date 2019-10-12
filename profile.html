@@ -49,11 +49,9 @@
                 <a class="nav-link js-scroll-trigger" href="./"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a style="cursor: pointer;" class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </li>
-              <li class="nav-item">
-
-              </li>
+            
 
             </ul>
           </div>
@@ -72,9 +70,7 @@
     <strong>Reason:</strong> <span id="banreason">no reason provided</span>
     </div>
 
-    <div id="beta" class="alert alert-danger" role="alert">
-      Jola is currently under heavy development. Use at your own risk.
-</div>
+    
   <!--
 <img src="./assets/stibarcadvert.png" style="margin-left:100px;float: left;">
 
@@ -100,7 +96,7 @@
         <br>
         <h4 id="biotitle">Bio:</h4>
     <p><span id="bio">This user has not configured their biography yet.</p>
-
+      <textarea style="display:none;" class="form-control" id="nbio" rows="3"></textarea>
     </div>
 
     <div>

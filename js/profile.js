@@ -85,15 +85,19 @@ checkIfBan();
 
 
 function editProfile() {
+  var pop = document.getElementById("bio").innerHTML;
+  
     document.getElementById("biotitle").innerHTML = 'Bio: <small>(editable)</small>';
 document.getElementById("save").style.display = "block";
-
+document.getElementById("bio").style.display = "none";
     document.getElementById("edit").style.display  = "none";
-  document.getElementById("bio").contentEditable = "true";
+  document.getElementById("nbio").style.display = "block";
+  document.getElementById("nbio").value = pop;
 
 }
 
 function save() {
+  document.getElementById("bio").style.display = "block";
   document.getElementById("pagecontent").style.display = "none";
     document.getElementById("loader").style.display = "block";
   document.getElementById("biotitle").innerHTML = 'Bio:';
@@ -101,9 +105,9 @@ function save() {
 
   document.getElementById("save").style.display  = "none";
     document.getElementById("edit").style.display  = "block";
-    document.getElementById("bio").contentEditable = "false";
+    document.getElementById("nbio").style.display = "none";
 
-  var newBio = document.getElementById("bio").innerHTML;
+  var newBio = document.getElementById("nbio").value;
     var newZip = document.getElementById("zip").innerHTML;
     console.log(newBio, newZip);
     document.getElementById("pagecontent").style.display = "block";
