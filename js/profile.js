@@ -47,6 +47,7 @@ function syncAll() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("bio").innerHTML = JSON.parse(this.responseText).bio;
         document.getElementById("zip").innerHTML =  JSON.parse(this.responseText).zip;
+        document.getElementById("edu").innerHTML =  JSON.parse(this.responseText).edu;
         document.getElementById("grade").innerHTML =  JSON.parse(this.responseText).grade + "th";
         document.getElementById("name").innerHTML = " " + JSON.parse(this.responseText).firstname + " " + JSON.parse(this.responseText).lastname;
         document.getElementById("pfp").src = `https://ui-avatars.com/api/?name=${JSON.parse(this.responseText).firstname}+${JSON.parse(this.responseText).lastname}&color=fffff&background=ffa500`
@@ -87,7 +88,6 @@ checkIfBan();
 function editProfile() {
   var pop = document.getElementById("bio").innerHTML;
   
-    document.getElementById("biotitle").innerHTML = 'Bio: <small>(editable)</small>';
 document.getElementById("save").style.display = "block";
 document.getElementById("bio").style.display = "none";
     document.getElementById("edit").style.display  = "none";
@@ -100,7 +100,7 @@ function save() {
   document.getElementById("bio").style.display = "block";
   document.getElementById("pagecontent").style.display = "none";
     document.getElementById("loader").style.display = "block";
-  document.getElementById("biotitle").innerHTML = 'Bio:';
+
 
 
   document.getElementById("save").style.display  = "none";
@@ -124,4 +124,35 @@ function save() {
       xhttp.send();
 
       //
+}
+
+function syncSchools() {
+  if (verifiedSchools.value === "Select a school") {
+      // manual
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+            window.location.reload();
+          }
+      };
+      xhttp.open("GET", `https://jola.gq/setEdu?sessid=${sessid}&email=${email}&edu=${customname.value}`, true);
+      xhttp.send();
+      
+
+
+  } else {
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+           // Typical action to be performed when the document is ready:
+          window.location.reload();
+        }
+    };
+    xhttp.open("GET", `https://jola.gq/setEdu?sessid=${sessid}&email=${email}&edu=${verifiedSchools.value}`, true);
+    xhttp.send();
+
+  }
 }

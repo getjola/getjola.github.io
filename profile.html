@@ -34,15 +34,34 @@
 					</li>
 					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./portal"><i class="fas fa-search"></i> Portal</a>
 					</li>
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fas fa-comment"></i> Social
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							  <a class="dropdown-item form-inline" href="#">		
+								  <input id="userin" class="form-control" placeholder="Enter user email"> <span class="btn btn-dark btn-sm" onclick="searchUser();">Search</span>
+							  </a>
+						<!--  <a class="dropdown-item" href="#">Another action</a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#">Something else here</a>-->	
+							</div>
+						  </li>
+				
 					<li class="nav-item">
 						<a class="nav-link js-scroll-trigger" href="./"></a>
 					</li>
+					
+		
 					<li class="nav-item"> <a style="cursor: pointer;" class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
 					</li>
+					
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	
 	<br>
 	<style>
 		.main-container {
@@ -66,38 +85,87 @@
 			<div id="loader" class="loader"></div>
 		</center>
 		<div id="pagecontent" style="display:none;">
+			
 			<center>
 				<h4 style="font-size:3rem;"><img id="pfp" style="border-radius:55px;" src=""><span id="name"></span></h4>
 				<h4><span class="badge badge-dark"><i class="fas fa-university"></i> <span id="grade"></span></span>  <span class="badge badge-dark"><i class="fas fa-map-marker-alt"></i> <span id="zip"></span></span>
     <span class="badge badge-dark"><i class="fas fa-envelope"></i> <span id="email"></span></span></h4>
-				<input style="text-align:center;" id="userin" class="col-sm-3 form-control" placeholder="Enter user email"> <span class="btn btn-dark btn-sm" style="margin-top:.4%;" onclick="searchUser();">Search</span>
 			</center>
-			<div style=" line-height: normal;">
-				<div>
-					<br>
-					<h4 id="biotitle">Bio: </h4> 
-					<p><span id="bio">This user has not configured their biography yet.</p>
-      <textarea style="display:none;" class="form-control" id="nbio" rows="3"></textarea>
-    </div>
 
-    <button id="edit" onclick="editProfile();"  class="btn btn-dark btn-sm"><i class="fas fa-pencil-alt"></i> Edit Page</button>
-    <button id="save" onclick="save();" style="display:none;" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save Changes</button>
- 
-    <div>
-      <br>
-    <h4>Connections:</h4>
+			<br>
+
+			<div  class="row">
+				
+					<div class="col-sm-4">
+					  <div style="min-height:200px;" class="card">
+						<div class="card-body">
+						  <h5 class="card-title">Biography</h5>
+						  <p class="card-text">
+								<div style=" line-height: normal;">
+										<div>
+						
+											<p><span id="bio">This user has not configured their biography yet.</p>
+							  <textarea style="display:none;" class="form-control" id="nbio" rows="3"></textarea>
+							</div>
+						
+							<button id="edit" onclick="editProfile();"  class="btn btn-dark btn-sm"><i class="fas fa-pencil-alt"></i> Edit Bio</button>
+							<button id="save" onclick="save();" style="display:none;" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save Changes</button>
+						</div>
+						  </p>
+						</div>
+					  </div>
+					</div>
+					<div class="col-sm-4">
+					  <div style="min-height:200px;" class="card">
+						<div class="card-body">
+						  <h5 class="card-title">Connections</h5>
+						  <p class="card-text">I don't have any connections yet!</p>
+						
+						</div>
+					  </div>
+					</div>
+					<div  class="col-sm-4">
+							<div  style="min-height:200px;" class="card">
+							  <div class="card-body">
+								<h5 class="card-title">Education</h5>
+								<p class="card-text" id="edu">I haven't filled this in yet!</p>
+								<a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-dark btn-sm "><i class="fas fa-pencil-alt"></i> Edit Education</a>
+							  </div>
+							</div>
+						  </div>
+				  </div>
 
 
-    <p>This user has no connections.</p>
-    <br>
-    <h4>Education:</h4>
-    <p>This user has not stated where they are being educated.</p>
- <br>
+				  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="exampleModalLabel">What school do you go to?</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+						  <h6>If your school is Jola Verified - please select it in the menu.</h6>
+						  <select id="verifiedSchools">
+							<option>Select a school</option>
+							<option value="Garnet Valley High School">Garnet Valley High School</option>
+							<option value="Garnet Valley Middle School">Garnet Valley Middle School</option>
+						
+						  </select>
 
+						  <br><br>
 
-
-  
-      </div>
+						  <h6>If your school is <b>not</b> Jola Verified - please manually type it in using the FULL NAME.</h6>
+						  <input id="customname" placeholder="Type school name">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-dark" onclick="syncSchools();">Save changes</button>
+						</div>
+					  </div>
+					</div>
+				  </div>	
 
       <hr>
     <h3>Jola Feed</h3>
