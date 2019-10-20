@@ -1,5 +1,5 @@
 // First URL to get the user we are looking for
-
+var verifiedSchools = ["Garnet Valley High School", "Garnet Valley Middle School"]
 const urlObj = new URLSearchParams(window.location.search);
 const user = urlObj.get('user');
 var resultingData = undefined;
@@ -17,7 +17,11 @@ if (!user) {
         document.getElementById("pagecontent").style.display = "block";
         document.getElementById("loader").style.display = "none";
         document.getElementById("pfp").src = `https://ui-avatars.com/api/?name=${JSON.parse(this.responseText).firstname}+${JSON.parse(this.responseText).lastname}&color=fffff&background=ffa500`
-
+       if (verifiedSchools.includes((JSON.parse(this.responseText)).edu)) {
+          document.getElementById("edu").innerHTML = '<i title="This school is Jola Verfied." class="fas fa-check-circle"></i>   ' + (JSON.parse(this.responseText)).edu;
+        } else {
+        document.getElementById("edu").innerHTML = (JSON.parse(this.responseText)).edu;
+        }
         document.getElementById("bio").innerHTML = (JSON.parse(this.responseText)).bio;
         document.getElementById("grade").innerHTML = (JSON.parse(this.responseText)).grade;
                 document.getElementById("zip").innerHTML = (JSON.parse(this.responseText)).zip;
