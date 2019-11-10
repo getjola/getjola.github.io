@@ -71,17 +71,20 @@
   <br>
 
 
-  <center><div id="loader" style="display:none;" class="loader"></div></center>
+  <center><div id="loader" style="display:block;" class="loader"></div></center>
 
 
+<div class="container" style="display:none;" id="student">
+  <center><i style="font-size:5rem;" class="fas fa-user-lock"></i></center>
+<h1 style="text-align:center;"> You're not allowed to access this page.</h1>
+<center><h4>You need to be an employer to access this page.</h4></center>
+</div>
+
+<div id="biz">
 
   <div class="container">
 
-    <div class="alert alert-danger" role="alert">
-      Jola is currently under heavy development. Use at your own risk.
-</div>
-
-
+  
 
 <div style="display:none;" id="select">
 
@@ -101,16 +104,24 @@
 </div>
   </div>
 
-
+  <style>
+    .main-container {
+      min-height: 100vh; /* will cover the 100% of viewport */
+      overflow: hidden;
+      display: block;
+      position: relative;
+      padding-bottom: 100px; /* height of your footer */
+    }
+  </style>
 
   <!---  <center><div id="loader" class="loader"></div></center> -->
-<div id="pagecontent" style="display:block;">
-
+<div id="pagecontent main-container" style="display:block;">
+ 
 
       <div style="">
         <h1>Hello, <span id="name">user</span>!
         <br><br>
-
+ 
         <div id="nobiz">
 
           <div class="card">
@@ -132,27 +143,32 @@
                 </button>
               </div>
               <div class="modal-body">
+                        <div id="nosave" style="display:none;font-size:1rem;" class="alert alert-danger" role="alert">
+  <center><i class="fas  fa-exclamation-triangle fas-fw"></i> Unable to save listing. </center>
+</div>
                 <div class="form-group">
+
   <label for="exampleFormControlInput1" style="font-size:1rem;">Listing Title</label>
   <input class="form-control" id="listingtitle">
 </div>
                 <div class="form-group">
-             <label for="exampleFormControlTextarea1" style="font-size:1rem;">Description</label>
-             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+             <label  style="font-size:1rem;">Description</label>
+             <textarea class="form-control" id="description" rows="3"></textarea>
            </div>
 
-           <div style="font-size:1rem;" class="form-group">
-              <label for="exampleFormControlFile1">Company Logo</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <div style="font-size:1rem;" class="form-group">
+              <label >Company Logo</label>
+              <input type="file" class="form-control-file" id="companylogo">
             </div>
 
             <div class="form-group">
 <label for="exampleFormControlInput1" style="font-size:1rem;">Application URL</label>
-<input class="form-control" id="listingtitle">
+<input class="form-control" id="appurl">
 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-success"id="submitApp();" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-success" onclick="submitApp();">Save</button>
 
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
@@ -161,36 +177,23 @@
         </div>
 
 
+
 <div style="display:none;" id="list">
         <h4>Businesses you manage:</h4>
-        <table  class="table table-hover">
+        <table  style="font-size:1rem;" class="table table-hover">
           <thead id="mycompanies">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
-
+<th scope="col"> </th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td></td>
-
-
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td></td>
-
-
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td></td>
-
-            </tr>
+           
           </tbody>
         </table>
+
+        <button  style="font-size:1rem;" id="postbtn" data-toggle="modal" data-target="#myModal" class="btn btn-outline-success postbtn">+ New Listing</button>
 </div>
 </div>
 
@@ -201,10 +204,21 @@
 <br>
 <br>
 
+</div>
+
+</div>
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;"  href="./edu">Educators</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">Made with <i style="color:lightpink" class="fas fa-heart"></i> in the USA.</p> <br>
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;" href="./legal.html">Legal</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">&copy Jola 2019</p> <br>
+
+    </div>
+  </footer>
     <script src="./js/auth.js?latest2"></script>
-<script>
-console.log('%cb %cb Stop!', 'color:blue;border:1px solid black', 'color:black;border:1px solid black');
-</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
