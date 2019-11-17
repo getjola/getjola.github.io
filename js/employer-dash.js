@@ -21,6 +21,14 @@ console.log("Checking with... " + `https://jola.gq/user?sessid=${sessid}&email=$
 xhttp.open("GET", `https://jola.gq/user?sessid=${sessid}&email=${email}`, true); // Get User Object
 xhttp.send();
 
+/*
+function resync() {
+  xhttp.open("GET", `https://jola.gq/user?sessid=${sessid}&email=${email}`, true); // Get User Object
+
+  xhttp.send();
+  modify()
+}*/
+
   function appendNew() {
 }
 
@@ -34,7 +42,7 @@ function modify() {
     
 
     document.getElementById("biz").style.display = "block";
-    if (!userObject.ownerOf) {
+    if (!userObject.ownerOf || (userObject.ownerOf).length == 0) {
       document.getElementById("nobiz").style.display = "block";
 
     } else {
@@ -71,9 +79,10 @@ function deleteListing(what) {
 
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        if (this.responseText == "good") { 
-          window.location.reload();
-        } else {
+        if (this.responseText == "done") { 
+        window.location.href = "https://getjola.me/employer-dash"
+      
+      } else {
           window.alert("Unable to delete listing.")
         }
       }
@@ -101,7 +110,8 @@ function submitApp() {
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if (this.responseText == "good") { 
-          window.location.reload();
+          window.location.href = "https://getjola.me/employer-dash"
+      
         } else {
           document.getElementById("nosave").style.display = "block";
         }
