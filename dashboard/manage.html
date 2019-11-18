@@ -1,0 +1,121 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+
+      </style>
+    <!-- Bootstrap Modals ---> 
+    <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+    <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                               
+    <!-- Jola Modules -->      
+    <script src =  "../js/employer-dash.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3. 1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/employer-dash.css">
+    <title>Jola - Employer Dashboard</title>
+  </head>
+  <body>
+
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="/"><img width="40" class="animated rollIn" src="../assets/costume3.png"></img></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+
+            <ul class="navbar-nav ml-auto">
+
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../settings"><i class="fas fa-cog"></i> Settings</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../saved"><i class="fas fa-sticky-note"></i> Stickies</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="./portal"><i class="fas fa-search"></i> Portal</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="./"></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+
+
+  <br>
+
+  <center><div style="display:block;" class="loader"></div></center>
+      <div class="container main-container" style="text-align: center;">
+
+            <h1> <i class="fas fa-tools"></i> Update Listing</h1>
+          <center> Title<br><br><input class="form-control col-sm-3"><br></center> 
+          <center> Description<br><br><input class="form-control col-sm-3"><br></center> 
+          <center> Application URL<br><br><input class="form-control col-sm-3"><br></center> 
+          <button class="btn btn-success"><i class="fas fa-save"></i> Save</button>
+      </div>
+
+
+<br><br>
+<footer class="py-5 bg-dark footer">
+    <div class="container">
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;"  href="./edu">Educators</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">Made with <i style="color:lightpink" class="fas fa-heart"></i> in the USA.</p> <br>
+      <p  class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;" href="./legal.html">Legal</a></p>
+      <p  style="float:right;" class="m-0 text-center text-white">&copy Jola 2019</p> <br>
+
+    </div>
+  </footer>
+    <script src="../js/auth.js?latest2"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
