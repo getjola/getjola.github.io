@@ -31,14 +31,17 @@ xhttp.onreadystatechange = function() {
 
    } else {
       // session id was valid so run This
-
+      console.log((xhttp.responseText));
       console.log(xhttp.responseText);
       var card = xhttp.responseText;
 
     try {
-      document.getElementById("company-title").innerHTML = JSON.parse(card).title;
+      document.getElementById("author").href = `https://getjola.me/user?user=${JSON.parse(card).createdBy}`;
+      document.getElementById("author").innerHTML = JSON.parse(card).createdBy;
+      document.getElementById("title").innerHTML = "Listing for " + params;
+      document.getElementById("company-title").innerHTML = params;
           document.getElementById("company-desc").innerHTML = JSON.parse(card).description;
-              document.getElementById("image1").src = JSON.parse(card).image1;
+        //      document.getElementById("image1").src = JSON.parse(card).image1;
       //
     } catch(err) {
       console.log(card.title);
