@@ -22,7 +22,7 @@ if (!user) {
         } else {
         document.getElementById("edu").innerText = (JSON.parse(this.responseText)).edu;
         }
-        document.getElementById("bio").innerText = (JSON.parse(this.responseText)).bio;
+        document.getElementById("bio").innerHTML = (JSON.parse(this.responseText)).bio.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br/>");
         document.getElementById("grade").innerText = (JSON.parse(this.responseText)).grade;
                 document.getElementById("zip").innerHTML = (JSON.parse(this.responseText)).zip;
                                 document.getElementById("email").innerHTML = urlObj.get('user');;
