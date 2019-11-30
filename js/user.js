@@ -18,15 +18,15 @@ if (!user) {
         document.getElementById("loader").style.display = "none";
         document.getElementById("pfp").src = `https://ui-avatars.com/api/?name=${JSON.parse(this.responseText).firstname}+${JSON.parse(this.responseText).lastname}&color=fffff&background=ffa500`
        if (verifiedSchools.includes((JSON.parse(this.responseText)).edu)) {
-          document.getElementById("edu").innerHTML = '<i title="This school is Jola Verfied." class="fas fa-check-circle"></i>   ' + (JSON.parse(this.responseText)).edu;
+          document.getElementById("edu").innerHTML = '<i title="This school is Jola Verfied." class="fas fa-check-circle"></i>   ' + (JSON.parse(this.responseText)).edu.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
         } else {
-        document.getElementById("edu").innerHTML = (JSON.parse(this.responseText)).edu;
+        document.getElementById("edu").innerText = (JSON.parse(this.responseText)).edu;
         }
-        document.getElementById("bio").innerHTML = (JSON.parse(this.responseText)).bio;
-        document.getElementById("grade").innerHTML = (JSON.parse(this.responseText)).grade;
+        document.getElementById("bio").innerText = (JSON.parse(this.responseText)).bio;
+        document.getElementById("grade").innerText = (JSON.parse(this.responseText)).grade;
                 document.getElementById("zip").innerHTML = (JSON.parse(this.responseText)).zip;
                                 document.getElementById("email").innerHTML = urlObj.get('user');;
-        document.getElementById("name").innerHTML = (JSON.parse(this.responseText)).firstname + " " + (JSON.parse(this.responseText)).lastname;
+        document.getElementById("name").innerText = (JSON.parse(this.responseText)).firstname + " " + (JSON.parse(this.responseText)).lastname;
     }
    }
  };
