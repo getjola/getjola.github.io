@@ -92,7 +92,7 @@ document.getElementById("save").style.display = "block";
 document.getElementById("bio").style.display = "none";
     document.getElementById("edit").style.display  = "none";
   document.getElementById("nbio").style.display = "block";
-  document.getElementById("nbio").value = pop;
+  document.getElementById("nbio").value = pop.replace(/<br>/g,"\n").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&");
 
 }
 
