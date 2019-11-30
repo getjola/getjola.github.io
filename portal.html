@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
-    
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,61 +17,58 @@
 
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
-        <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="/"><img width="40" class="animated rollIn" src="./assets/costume3.png"></img></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
+  		<div class="container">
+  			<a class="navbar-brand js-scroll-trigger" href="/">
+  				<img width="40" class="animated rollIn" src="./assets/costume3.png"></img>
+  			</a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+  				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span
+  					class="navbar-toggler-icon"></span>
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbarResponsive">
+  				<ul class="navbar-nav ml-auto">
+  					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./profile.html"><i
+  								class="fas fa-user-circle"></i> My Profile</a>
+  					</li>
+  					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./saved.html"><i
+  								class="fas fa-sticky-note"></i> Stickies</a>
+  					</li>
+  					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./portal.html"><i
+  								class="fas fa-search"></i> Job Search</a>
+  					</li>
 
-          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-ellipsis-h"></i> More
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="./search/user.html">User Search</a>
+             <a class="dropdown-item" href="./settings.html">Account Settings</a>
+             <div class="dropdown-divider"></div>
+             <a style="cursor: pointer;" class="dropdown-item"
+               onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+           </div>
+         </li>
 
 
 
-            <ul class="navbar-nav ml-auto">
-
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./profile.html"><i class="fas fa-user-circle"></i> Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./settings"><i class="fas fa-cog"></i> Settings</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./saved"><i class="fas fa-sticky-note"></i> Stickies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./portal"><i class="fas fa-search"></i> Portal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./"></a>
-              </li>
-              <li class="nav-item">
-                <a style="cursor: pointer;" class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-
-      </nav>
+  				</ul>
+  			</div>
+  		</div>
+  	</nav>
 
 <center>
   <br>
   <div style="position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">
   <h4 style="font-size:3rem;"> What are you interested in? </h4>
-  <p> </p>
-
-<button class="btn btn-primary btn-lg">Computer Science</button>
-<button class="btn btn-warning btn-lg">Medical</button>
-<button class="btn btn-success btn-lg">Retail</button>
-<br><br>
-<button class="btn btn-danger btn-lg">Research</button>
-<button class="btn btn-info btn-lg">Education</button>
-<button class="btn btn-dark btn-lg">Police/Military</button>
-<button class="btn btn-secondary btn-lg">Volunteering</button>
+  <div class="form-group">
+      <label for="interests">Just type in anything that interests you.</label>
+      <textarea class="form-control" id="interests" rows="3"></textarea>
+    </div>
 <br>
-<a href="./listings.html">I'm not interested in any of these..</a>
+<button class="btn btn-outline-dark btn-lg">Continue to next step</button>
+
 </div>
 </center>
 
