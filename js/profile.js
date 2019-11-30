@@ -45,7 +45,7 @@ function syncAll() {
 
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("bio").innerHTML = JSON.parse(this.responseText).bio.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br/>");
+        try {document.getElementById("bio").innerHTML = JSON.parse(this.responseText).bio.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br/>");}catch(err){}
         document.getElementById("zip").innerText =  JSON.parse(this.responseText).zip;
         document.getElementById("edu").innerText =  JSON.parse(this.responseText).edu;
         document.getElementById("grade").innerText =  JSON.parse(this.responseText).grade + "th";
