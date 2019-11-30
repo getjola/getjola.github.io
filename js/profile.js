@@ -120,7 +120,7 @@ function save() {
             window.location.reload();
           }
       };
-      xhttp.open("GET", `https://jola.gq/updateuser?sessid=${sessid}&email=${email}&bio=${newBio}`, true);
+      xhttp.open("GET", `https://jola.gq/updateuser?sessid=${encodeURIComponent(sessid)}&email=${encodeURIComponent(email)}&bio=${encodeURIComponent(newBio)}`, true);
       xhttp.send();
 
       //
@@ -137,7 +137,7 @@ function syncSchools() {
             window.location.reload();
           }
       };
-      xhttp.open("GET", `https://jola.gq/setEdu?sessid=${sessid}&email=${email}&edu=${customname.value}`, true);
+      xhttp.open("GET", `https://jola.gq/setEdu?sessid=${encodeURIComponent(sessid)}&email=${encodeURIComponent(email)}&edu=${encodeURIComponent(customname.value)}`, true);
       xhttp.send();
       
 
@@ -151,7 +151,7 @@ function syncSchools() {
           window.location.reload();
         }
     };
-    xhttp.open("GET", `https://jola.gq/setEdu?sessid=${sessid}&email=${email}&edu=${verifiedSchools.value}`, true);
+    xhttp.open("GET", `https://jola.gq/setEdu?sessid=${encodeURIComponent(sessid)}&email=${encodeURIComponent(email)}&edu=${encodeURIComponent(verifiedSchools.value)}`, true);
     xhttp.send();
 
   }
