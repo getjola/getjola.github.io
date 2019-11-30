@@ -45,13 +45,13 @@ function syncAll() {
 
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("bio").innerHTML = JSON.parse(this.responseText).bio;
-        document.getElementById("zip").innerHTML =  JSON.parse(this.responseText).zip;
-        document.getElementById("edu").innerHTML =  JSON.parse(this.responseText).edu;
-        document.getElementById("grade").innerHTML =  JSON.parse(this.responseText).grade + "th";
-        document.getElementById("name").innerHTML = " " + JSON.parse(this.responseText).firstname + " " + JSON.parse(this.responseText).lastname;
+        document.getElementById("bio").innerHTML = JSON.parse(this.responseText).bio.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br/>");
+        document.getElementById("zip").innerText =  JSON.parse(this.responseText).zip;
+        document.getElementById("edu").innerText =  JSON.parse(this.responseText).edu;
+        document.getElementById("grade").innerText =  JSON.parse(this.responseText).grade + "th";
+        document.getElementById("name").innerText = " " + JSON.parse(this.responseText).firstname + " " + JSON.parse(this.responseText).lastname;
         document.getElementById("pfp").src = `https://ui-avatars.com/api/?name=${JSON.parse(this.responseText).firstname}+${JSON.parse(this.responseText).lastname}&color=fffff&background=ffa500`
-        document.getElementById("email").innerHTML =  localStorage.getItem("email")
+        document.getElementById("email").innerText =  localStorage.getItem("email")
         document.getElementById("pagecontent").style.display = "block";
         document.getElementById("loader").style.display = "none";
 
