@@ -1,5 +1,5 @@
 # getjola.github.io
-![jola homepage](https://raw.githubusercontent.com/getjola/getjola.github.io/master/Screenshot%20from%202019-12-03%2019-42-26.png)
+
 ## What is Jola?
 Jola is a website made for finding jobs and internships for highschool students. The idea for this project was the result of my poor experience with popular job websites made for a more older audience.
 
@@ -11,3 +11,6 @@ Jola offers many features that allows students to show who they really are to th
 
 ## Why should I hire staff through Jola?
 If you're looking for a very specific type of person - Jola offers you plenty of options to choose from. You'll have access to loads of talent - and they will eagerly work for you.
+
+## Screenshots
+![jola homepage](https://raw.githubusercontent.com/getjola/getjola.github.io/master/Screenshot%20from%202019-12-03%2019-42-26.png)
