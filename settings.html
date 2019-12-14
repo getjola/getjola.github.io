@@ -5,7 +5,7 @@
     <script src="./js/settings.js"></script>
     <script src="./js/auth.js"></script>
     <link rel="shortcut icon" type="image/png" href="./assets/costume3.png">
-      
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,50 +14,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/register.css">
     <title>Jola - Settings</title>
+
+
+
   </head>
   <body>
 
 
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
-        <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="/"><img width="40" class="animated rollIn" src="./assets/costume3.png"></img></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">
+          <img width="40" class="animated rollIn" src="./assets/costume3.png"></img>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./profile.html"><i
+                  class="fas fa-user-circle"></i> My Profile</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./saved.html"><i
+                  class="fas fa-sticky-note"></i> Stickies</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./portal.html"><i
+                  class="fas fa-search"></i> Job Search</a>
+            </li>
 
-          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-ellipsis-h"></i> More
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="./search/user.html">User Search</a>
+             <a class="dropdown-item" href="./settings.html">Account Settings</a>
+             <div class="dropdown-divider"></div>
+             <a style="cursor: pointer;" class="dropdown-item"
+               onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+           </div>
+         </li>
 
 
 
-            <ul class="navbar-nav ml-auto">
-
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./profile.html"><i class="fas fa-user-circle"></i> Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./settings.html"><i class="fas fa-cog"></i> Settings</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./saved"><i class="fas fa-sticky-note"></i> Stickies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./portal"><i class="fas fa-search"></i> Portal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./"></a>
-              </li>
-              <li class="nav-item">
-                <a style="cursor: pointer;" class="nav-link js-scroll-trigger" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
-              </li>
-
-            </ul>
-          </div>
+          </ul>
         </div>
-
-      </nav>
+      </div>
+    </nav>
 
 
 
@@ -68,28 +73,38 @@
   <h4 style="font-size:2.5rem;">Settings</h4>
   <hr>
     <center>
-  <h4 style="font-size:1.5rem;">Account Settings</h4>
+      <div class="card">
+  <div class="card-body">
 
-  <p>Change your password:</p>
-  <div id="errorbox" style="display:none;" class="alert alert-danger" role="alert">
-<span id="errormsg"></span>
-</div>
-  <div class="input-group col-sm-6">
+  <h4 style="font-size:1.5rem;"><i style="fl"class="fas fa-shield-alt"></i> Account Security</h4>
+   </div>
 
-  <div class="input-group-prepend">
-    <span class="input-group-text" >New Password</span>
-  </div>
-  <input id="ogpassword" type="password" class="form-control" placeholder="Password" aria-label="Username" >
+
+       <p>Change your password:</p>
+       <div id="errorbox" style="display:none;" class="alert alert-danger" role="alert">
+     <span id="errormsg"></span>
+     </div>
+       <div class="input-group col-sm-6">
+
+       <div class="input-group-prepend">
+         <span class="input-group-text" >New Password</span>
+       </div>
+       <input id="ogpassword" type="password" class="form-control" placeholder="Password" aria-label="Username" >
+     </div>
+     <br>
+     <div class="input-group col-sm-6">
+     <div class="input-group-prepend">
+       <span class="input-group-text" >Confirm New Password</span>
+     </div>
+     <input id="confpassword" type="password" class="form-control" placeholder="Confirm New Password" aria-label="Username" >
 </div>
 <br>
-<div class="input-group col-sm-6">
-<div class="input-group-prepend">
-  <span class="input-group-text" >Confirm New Password</span>
-</div>
-<input id="confpassword" type="password" class="form-control" placeholder="Confirm New Password" aria-label="Username" >
+
+     <button id="save" onclick="save();" class="btn btn-success col-2"><i class="fas fa-save"></i> Save Changes</button>
+<br>
 
 </div>
-<br>
+
 <!--
   <p>Change your name:</p>
   <div class="input-group col-sm-6">
@@ -122,10 +137,17 @@
 <br>
 <br>
 -->
-<button id="save" onclick="save();" class="btn btn-success"><i class="fas fa-save"></i> Save Changes</button>
+<br>
+<div class="card">
+<div class="card-body">
 
+<h4 style="font-size:1.5rem;"><i class="fas fa-user-lock"></i> Privacy Settings</h4>
+</div>
 
 </center>
+</div>
+</div>
+
 
 <br>
 <br>
