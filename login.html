@@ -1,13 +1,3 @@
-<!--<center>
-    <br><br>
-  <h1 style="font-family:calibri;">Jola is currently under maintenance.</h1>
-  <h2 style="font-family:calibri;">We'll be back soon!</h2>
-  <a style="font-family:calibri;font-size:1rem;" href="https://twitter.com/getjola">Twitter</a>
-  <a style="font-family:calibri;font-size:1rem;" href="https://discord.gg/FUPEK4k">Discord</a>
-  </center>-->
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -112,7 +102,14 @@
   </footer>
 
 
-
+  <script>
+  document.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { 
+      login();
+    }
+});
+</script>
   <script src="./js/sync.js"></script>
   <script src="./js/auth.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
