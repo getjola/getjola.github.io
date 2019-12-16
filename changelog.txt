@@ -1,2 +1,3 @@
 12/14/19
 - Enter to login, before you had to always click the login button but now you can also just click enter.
+- Bug Fixed

@@ -1,1 +1,1 @@
-// get the connections 
+// gets people will the same area code

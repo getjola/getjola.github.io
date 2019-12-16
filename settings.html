@@ -13,6 +13,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/settings.css">
     <title>Jola - Settings</title>
 
 
@@ -92,15 +93,17 @@
        <input id="ogpassword" type="password" class="form-control" placeholder="Password" aria-label="Username" >
      </div>
      <br>
+     
      <div class="input-group col-sm-6">
      <div class="input-group-prepend">
        <span class="input-group-text" >Confirm New Password</span>
      </div>
+
      <input id="confpassword" type="password" class="form-control" placeholder="Confirm New Password" aria-label="Username" >
 </div>
-<br>
 
-     <button id="save" onclick="save();" class="btn btn-success col-2"><i class="fas fa-save"></i> Save Changes</button>
+
+<br>
 <br>
 
 </div>
@@ -143,6 +146,17 @@
 
 <h4 style="font-size:1.5rem;"><i class="fas fa-user-lock"></i> Privacy Settings</h4>
 </div>
+
+<center>
+Private Profile:<br>
+<label title="If it's orange it means that your profile is private." class="switch">
+  <input title="If it's orange it means that your profile is private." type="checkbox">
+  <span title="If it's orange it means that your profile is private." class="slider round"></span>
+</label>
+<br> <br>
+<a href="mailto:support@getjola.me">Request your data</a>
+<br><br>
+</center>
 
 </center>
 </div>
