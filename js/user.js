@@ -27,7 +27,12 @@ if (!user) {
                 document.getElementById("zip").innerHTML = (JSON.parse(this.responseText)).zip;
                                 document.getElementById("email").innerHTML = urlObj.get('user');;
         document.getElementById("name").innerText = (JSON.parse(this.responseText)).firstname + " " + (JSON.parse(this.responseText)).lastname;
-    }
+ 
+        if (user === "pranav.ramesh@getjola.me") {
+          document.getElementById("nice").style.display = "block";
+        }
+   
+      }
    }
  };
  xhttp.open("GET", `https://jola.gq/public/user?email=${user}`, true);

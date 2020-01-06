@@ -1,4 +1,3 @@
-
 var email = localStorage.getItem("email");
 var sessid = localStorage.getItem("sessid");
 
