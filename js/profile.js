@@ -66,6 +66,11 @@ function checkIfBan() {
 
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+        if (JSON.parse(this.responseText).grade === "employer") {
+          window.location.href = "./dashboard/home.html"
+        }
+
+
         if(JSON.parse(this.responseText).terminated === "yes") {
 document.getElementById("beta").style.display = "none";
           document.getElementById("banned").style.display = "block";

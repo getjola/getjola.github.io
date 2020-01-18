@@ -1,6 +1,29 @@
 var email = localStorage.getItem("email");
 var sessid = localStorage.getItem("sessid");
 
+
+var xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     if ( JSON.parse(this.responseText).type == "employer") {
+      document.getElementById("employer").style.display = "block"
+      document.getElementById("normal").style.display = "none"
+      } else 
+      {
+
+        document.getElementById("employer").style.display = "none"
+        document.getElementById("normal").style.display = "block"
+      }
+
+ 
+
+    }
+}
+xhttp.open("GET", `https://www.jola.gq/user?sessid=${sessid}&email=${email}`, true);
+xhttp.send();
+
+
 function updatePassword(password) {
   var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {

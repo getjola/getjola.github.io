@@ -21,10 +21,42 @@
   </head>
   <body>
 
+    <nav id="employer" style="display:none;" class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">
+          <img width="40" class="animated rollIn" src="./assets/costume3.png"></img>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./dashboard/home.html"><i class="fas fa-pencil-alt"></i> My Dashboard</a>
+            </li>
+          
+  
+            <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-ellipsis-h"></i> More
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="../settings.html">Account Settings</a>
+             <div class="dropdown-divider"></div>
+             <a style="cursor: pointer;" class="dropdown-item"
+               onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+           </div>
+         </li>
+  
+  
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
+    <nav id="normal" class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="/">
           <img width="40" class="animated rollIn" src="./assets/costume3.png"></img>
