@@ -14,7 +14,7 @@ xhttp.onreadystatechange = function() {
 
  }
 }	
-xhttp.open("GET", `http://jola.gq/user?email=${email}&sessid=${sessid}`, true);
+xhttp.open("GET", `https://jola.gq/user?email=${email}&sessid=${sessid}`, true);
 xhttp.send();
 
 
@@ -49,7 +49,7 @@ function interested() {
             }
         }
        }	
-       xhttp.open("GET", `http://jola.gq/setInterests?email=${email}&sessid=${sessid}&interests=${interests}`, true);
+       xhttp.open("GET", `https://jola.gq/setInterests?email=${email}&sessid=${sessid}&interests=${interests}`, true);
        xhttp.send();
    }
 }
