@@ -106,6 +106,8 @@ function submitApp() {
   var title = document.getElementById("listingtitle").value;
   var description = document.getElementById("description").value;
   var appURL = document.getElementById("appurl").value;
+  var zip = document.getElementById("zip").value;
+  var blurb = document.getElementById("blurb").value;
 
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -119,7 +121,7 @@ function submitApp() {
   };
 
 
-  xhttp.open("GET", `https://jola.gq/createListing?sessid=${sessid}&email=${email}&desc=${description}&title=${title}&appURL=${appURL}`, true); // Get User Object
+  xhttp.open("GET", `https://localhost/createListing?sessid=${sessid}&email=${email}&desc=${description}&title=${title}&appURL=${appURL}&zip=${zip}&blurb=${blurb}`, true); // Get User Object
   xhttp.send();
 
 
