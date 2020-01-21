@@ -121,7 +121,7 @@ function submitApp() {
   };
 
 
-  xhttp.open("GET", `https://localhost/createListing?sessid=${sessid}&email=${email}&desc=${description}&title=${title}&appURL=${appURL}&zip=${zip}&blurb=${blurb}`, true); // Get User Object
+  xhttp.open("GET", `https://jola.gq/createListing?sessid=${sessid}&email=${email}&desc=${description}&title=${title}&appURL=${appURL}&zip=${zip}&blurb=${blurb}`, true); // Get User Object
   xhttp.send();
 
 
