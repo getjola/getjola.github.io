@@ -1,3 +1,14 @@
+/*
+
+    This code is archived, kept mainly for legacy purposes.
+    Date of Creation: unknown
+    Reviewed: 1/31/20
+    Reviewee: pranavramesh@getjola.me
+    Author(s): pranavramesh@getjola.me
+
+*/
+
+/*
 console.log("[client] getlisting.js has loaded.");
 console.log( `https://www.jola.gq/listing?name=${params}&sessid=${localStorage.getItem('sessid')}`)
 function getSearchParameters() {
@@ -11,7 +22,7 @@ function transformToAssocArray( prmstr ) {
     for ( var i = 0; i < prmarr.length; i++) {
         var tmparr = prmarr[i].split("=");
         params[tmparr[0]] = tmparr[1];
-    }
+    } 
     return params;
 }
 
@@ -53,3 +64,4 @@ xhttp.onreadystatechange = function() {
 console.log(`https://www.jola.gq/listing?name=${params}&email=${localStorage.getItem('email')}&sessid=${localStorage.getItem('sessid')}`)
 xhttp.open("GET", `https://www.jola.gq/listing?name=${params}&email=${localStorage.getItem('email')}&sessid=${localStorage.getItem('sessid')}`, true);
 xhttp.send();
+*/
