@@ -14,7 +14,7 @@
 
 
 
-var url = "https://jola.gq/";
+var url = "https://jola.gq";
 
 
 
