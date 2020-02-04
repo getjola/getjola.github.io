@@ -14,7 +14,7 @@
 
 
 
-var url = "http://localhost";
+var url = "https://jola.gq/";
 
 
 
