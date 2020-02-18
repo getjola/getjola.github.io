@@ -1,1 +1,0 @@
-// gets people will the same area code
