@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+	<script type="text/javascript">
+		(function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })();
+	</script>
+	<link rel="shortcut icon" type="image/png" href="./assets/costume3.png">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./styles/profile.css">
+	<style>
+		.main-container {
+		  min-height: 100vh;
+		  /* will cover the 100% of viewport */
+		  overflow: hidden;
+		  display: block;
+		  position: relative;
+		  padding-bottom: 100px;
+		  /* height of your footer */
+		}
+	  </style>
+	
+	<title>Jola - Profile</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="/">
+				<img width="40" class="animated rollIn" src="./assets/costume3.png"></img>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span
+					class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./profile.html"><i
+								class="fas fa-user-circle"></i> My Profile</a>
+					</li>
+					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./saved.html"><i
+								class="fas fa-sticky-note"></i> Stickies</a>
+					</li>
+					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./portal.html"><i
+								class="fas fa-search"></i> Job Search</a>
+					</li>
+
+          <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <i class="fas fa-ellipsis-h"></i> More
+         </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a class="dropdown-item" href="./search/user.html">User Search</a>
+           <a class="dropdown-item" href="./settings.html">Account Settings</a>
+           <div class="dropdown-divider"></div>
+           <a style="cursor: pointer;" class="dropdown-item"
+             onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+         </div>
+       </li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+
+	<div class="container main-container">
+		<div style="display:none;" id="banned">
+			<h1>This account has been banned from the Jola Platform.</h1>
+			<strong>Reason:</strong> <span id="banreason">no reason provided</span>
+		</div>
+		<!--
+<img src="./assets/stibarcadvert.png" style="margin-left:100px;float: left;">
+<img src="./assets/jolaadvert.png" style="margin-right:100px;float: right;">
+  -->
+		<center>
+			<div id="loader" class="loader"></div>
+		</center>
+		<div id="pagecontent" class="main-container" style="display:none;">
+
+			<center>
+				<h4 style="font-size:3rem;"><img id="pfp" style="border-radius:55px;" src=""><span id="name"></span>
+				</h4>
+				<h4><span class="badge badge-dark"><i class="fas fa-university"></i> <span id="grade"></span></span>
+					<span class="badge badge-dark"><i class="fas fa-map-marker-alt"></i> <span id="zip"></span></span>
+					<span class="badge badge-dark"><i class="fas fa-envelope"></i> <span id="email"></span></span></h4>
+			</center>
+
+			<br>
+
+			<div class="row">
+
+				<div class="col-sm-4">
+					<div style="min-height:200px;" class="card">
+						<div class="card-body">
+							<h5 class="card-title">Biography</h5>
+							<p class="card-text">
+								<div style=" line-height: normal;">
+									<div>
+
+										<p><span id="bio">This user has not configured their biography yet.</p>
+										<textarea style="display:none;" class="form-control" id="nbio"
+											rows="3"></textarea>
+									</div>
+
+									<button id="edit" onclick="editProfile();" class="btn btn-dark btn-sm"><i
+											class="fas fa-pencil-alt"></i> Edit Bio</button>
+									<button id="save" onclick="save();" style="display:none;"
+										class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save Changes</button>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div style="min-height:200px;" class="card">
+						<div class="card-body">
+							<h5 class="card-title">Connections</h5>
+							<p class="card-text">I don't have any connections yet!</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div style="min-height:200px;" class="card">
+						<div class="card-body">
+							<h5 class="card-title">Education</h5>
+							<p class="card-text" id="edu">I haven't filled this in yet!</p>
+							<a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-dark btn-sm "><i
+									class="fas fa-pencil-alt"></i> Edit Education</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div style="" class="card">
+				<div class="card-body">
+			
+			<center>	<h1><img src="assets\ad4.png"></h1> 
+				<small style="float:right;"><i class="fas fa-info-circle"></i> Sponsored Content</small>	
+			</center>
+		
+						</div>
+					</div>
+<br>
+
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">What school do you go to?</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h6>If your school is Jola Verified - please select it in the menu.</h6>
+							<select id="verifiedSchools">
+								<option>Select a school</option>
+								<option value="Garnet Valley High School">Garnet Valley High School</option>
+								<option value="Garnet Valley Middle School">Garnet Valley Middle School</option>
+
+							</select>
+
+							<br><br>
+
+							<h6>If your school is <b>not</b> Jola Verified - please manually type it in using the FULL
+								NAME.</h6>
+							<input id="customname" placeholder="Type school name">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-dark" onclick="syncSchools();">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+			
+		</div>
+
+
+	</div>
+
+
+
+
+	<footer style="" class="py-5 bg-dark">
+		<div class="container">
+		  <p class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;" href="./edu">Educators</a>
+		  </p>
+		  <p style="float:right;" class="m-0 text-center text-white">Made with <i style="color:lightpink"
+			  class="fas fa-heart"></i> in the USA.</p> <br>
+		  <p class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;"
+			  href="./legal.html">Legal</a></p>
+		  <p style="float:right;" class="m-0 text-center text-white">&copy Jola 2019</p> <br>
+	
+		</div>
+	  </footer>
+	</div>
+	
+</div>
+
+
+
+
+	
+
+	<script>
+		console.log('%cSTOP!\nNever paste anything here unless you wrote it yourself. You could potentially be giving someone the keys to your account without you even knowing!', 'font-style:bold; color:red;font-size:2rem;');
+	</script>
+	<script src="./js/auth.js?latest4"></script>
+	<script src="./js/profile.js?latest3"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

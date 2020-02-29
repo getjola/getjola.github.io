@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+
+<head>
+	<script type="text/javascript">
+		(function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })();
+	</script>
+
+	<link rel="shortcut icon" type="image/png" href="./assets/costume3.png">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./styles/profile.css">
+	<style>
+		.main-container {
+		  min-height: 100vh;
+		  /* will cover the 100% of viewport */
+		  overflow: hidden;
+		  display: block;
+		  position: relative;
+		  padding-bottom: 100px;
+		  /* height of your footer */
+		}
+	  </style>
+	
+	<title>Jola - Profile</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="/">
+				<img width="40" class="animated rollIn" src="./assets/costume3.png"></img>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span
+					class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./profile.html"><i
+								class="fas fa-user-circle"></i> My Profile</a>
+					</li>
+					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./saved.html"><i
+								class="fas fa-sticky-note"></i> Stickies</a>
+					</li>
+					<li class="nav-item"> <a class="nav-link js-scroll-trigger" href="./portal.html"><i
+								class="fas fa-search"></i> Job Search</a>
+					</li>
+
+          <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <i class="fas fa-ellipsis-h"></i> More
+         </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a class="dropdown-item" href="./search/user.html">User Search</a>
+           <a class="dropdown-item" href="./settings.html">Account Settings</a>
+           <div class="dropdown-divider"></div>
+           <a style="cursor: pointer;" class="dropdown-item"
+             onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+         </div>
+       </li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+
+	<div class="container main-container">
+		<div style="display:none;" id="banned">
+			<h1>This account has been banned from the Jola Platform.</h1>
+			<strong>Reason:</strong> <span id="banreason">no reason provided</span>
+		</div>
+		<!--
+<img src="./assets/stibarcadvert.png" style="margin-left:100px;float: left;">
+<img src="./assets/jolaadvert.png" style="margin-right:100px;float: right;">
+  -->
+		<center>
+			<div id="loader" style="display:block" class="loader"></div>
+		</center>
+		<div id="pagecontent" class="main-container" style="display:none;">
+			<div class="alert alert-danger" role="alert">
+				<b>This is still under major development. This will not function correctly. This is very experimental.</b>
+			  </div>
+			<h1>Jobs near <span id="zip">19060</span></h1> 
+			<div class="row">
+				<div class="col-sm-4">
+				  <div class="card">
+					<div class="card-body">
+					  <h5 class="card-title"> <i class="fas fa-check-circle" title="Verified"></i> getjola - softare developer internship avaliable</h5>
+					  <p class="card-text">You'll be working on the very website you found this listing on. :)</p>
+					  <button id="apply_button" class="btn bg-dark btn-sm" onclick="window.location.href = './listing.html?title=Jola'" style="color:white;"> <i class="fas fa-mouse-pointer"></i> Apply</button>
+					  <button id="apply_button" class="btn bg-danger btn-sm" onclick="message.alert('Thanks for the report. Our moderation team will review this listing.')" style="color:white;"><i class="fas fa-flag"></i> Report</button>
+				  
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-4">
+				  <div class="card">
+					<div class="card-body">
+					  <h5 class="card-title">MathPlus - looking for TA's!</h5>
+					  <p class="card-text">​MathPlus has the most flexible and comprehensive curriculum for students in K12.</p>
+					  <button id="apply_button" class="btn bg-dark btn-sm" onclick="window.location.href = './listing.html?title=MathPlus'" style="color:white;"> <i class="fas fa-mouse-pointer"></i> Apply</button>
+					  <button id="apply_button" class="btn bg-danger btn-sm" onclick="message.alert('Thanks for the report. Our moderation team will review this listing.')" style="color:white;"><i class="fas fa-flag"></i> Report</button>
+				  
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-4">
+				  <div class="card">
+					<div class="card-body">
+					  <h5 class="card-title">STiBaRC</h5>
+					  <p class="card-text">​Develop and improve the STiBaRC front-end</p>
+					  <button id="apply_button" class="btn bg-dark btn-sm" onclick="window.location.href = './listing.html?title=MathPlus'" style="color:white;"> <i class="fas fa-mouse-pointer"></i> Apply</button>
+					  <button id="apply_button" class="btn bg-danger btn-sm" onclick="message.alert('Thanks for the report. Our moderation team will review this listing.')" style="color:white;"><i class="fas fa-flag"></i> Report</button>
+				  
+					</div>
+				  </div>
+				</div>
+				
+				  
+</div>
+				<br>
+				<div class="row">
+				<div class="col-sm-4">
+				  <div class="card">
+					<div class="card-body">
+					  <h5 class="card-title"> <i class="fas fa-check-circle" title="Verified"></i> getjola - softare developer internship avaliable</h5>
+					  <p class="card-text">You'll be working on the very website you found this listing on. :)</p>
+					  <button id="apply_button" class="btn bg-dark btn-sm" onclick="window.location.href = './listing.html?title=Jola'" style="color:white;"> <i class="fas fa-mouse-pointer"></i> Apply</button>
+					  <button id="apply_button" class="btn bg-danger btn-sm" onclick="message.alert('Thanks for the report. Our moderation team will review this listing.')" style="color:white;"><i class="fas fa-flag"></i> Report</button>
+				  
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-4">
+				  <div class="card">
+					<div class="card-body">
+					  <h5 class="card-title">MathPlus - looking for TA's!</h5>
+					  <p class="card-text">​MathPlus has the most flexible and comprehensive curriculum for students in K12.</p>
+					  <button id="apply_button" class="btn bg-dark btn-sm" onclick="window.location.href = './listing.html?title=MathPlus'" style="color:white;"> <i class="fas fa-mouse-pointer"></i> Apply</button>
+					  <button id="apply_button" class="btn bg-danger btn-sm" onclick="message.alert('Thanks for the report. Our moderation team will review this listing.')" style="color:white;"><i class="fas fa-flag"></i> Report</button>
+				  
+					</div>
+				  </div>
+				</div>
+
+				<!--
+
+
+
+				-->
+
+				<div class="col-sm-4">
+				  <div class="card">
+					<div class="card-body">
+					  <h5 class="card-title">STiBaRC</h5>
+					  <p class="card-text">​Develop and improve the STiBaRC front-end</p>
+					  <button id="apply_button" class="btn bg-dark btn-sm" onclick="window.location.href = './listing.html?title=STiBaRC'" style="color:white;"> <i class="fas fa-mouse-pointer"></i> Apply</button>
+					  <button id="apply_button" class="btn bg-danger btn-sm" onclick="message.alert('Thanks for the report. Our moderation team will review this listing.')" style="color:white;"><i class="fas fa-flag"></i> Report</button>
+				  
+					</div>
+				  </div>
+				</div>
+				
+			
+			
+		</div>
+
+<br>
+	
+	<h1>Jobs recommended for you</h1> 
+	<div class="row">
+		<div class="col-sm-4">
+		  <div class="card">
+			<div class="card-body">
+				<i>recommended jobs aren't ready yet</i>
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-4">
+		  <div class="card">
+			<div class="card-body">
+				<i>recommended jobs aren't ready yet</i>
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-body">
+					<i>recommended jobs aren't ready yet</i>
+				</div>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	</div>
+
+
+	<footer style="" class="py-5 bg-dark">
+		<div class="container">
+		  <p class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;" href="./edu">Educators</a>
+		  </p>
+		  <p style="float:right;" class="m-0 text-center text-white">Made with <i style="color:lightpink"
+			  class="fas fa-heart"></i> in the USA.</p> <br>
+		  <p class="m-0 text-center" style="color:lightgrey;float:left;"><a style="color:white;"
+			  href="./legal.html">Legal</a></p>
+		  <p style="float:right;" class="m-0 text-center text-white">&copy Jola 2019</p> <br>
+	
+		</div>
+	  </footer>
+	</div>
+	
+</div>
+
+
+
+
+	
+
+	<script>
+		
+		console.log('%cSTOP!\nNever paste anything here unless you wrote it yourself. You could potentially be giving someone the keys to your account without you even knowing!', 'font-style:bold; color:red;font-size:2rem;');
+	</script>
+	<script src="./js/auth.js?latest4"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+		<script src="./js/myjobs.js"></script>
+</body>
+
+</html>
